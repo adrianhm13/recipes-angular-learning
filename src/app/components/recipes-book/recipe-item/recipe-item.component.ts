@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, Input } from '@angular/core';
+import { Recipe } from 'src/app/models/recipe.model';
 
 @Component({
-    selector: 'app-recipe-item',
-    templateUrl: './recipe-item.component.html'
+  selector: 'app-recipe-item',
+  templateUrl: './recipe-item.component.html',
 })
-
 export class RecipeItem {
-    constructor() {}
+  @Input() recipe: Recipe;
+  constructor() {}
 }
